@@ -16,7 +16,10 @@
       crossorigin="anonymous"
     />
 
-    <!-- Font Awesome -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Font Awesome Icons -->
     <script
       src="https://kit.fontawesome.com/64486ec299.js"
       crossorigin="anonymous"
@@ -25,15 +28,116 @@
     <title>Newsweek</title>
   </head>
   <body class="bg-light">
-    <div class="container-xl px-0 overflow-hidden">
+    <div class="container-custom overflow-hidden">
+      <!-- Navigation Bar -->
       <header>
-        <nav class="navbar bg-danger">
-          <span class="navbar-brand h1">Navbar</span>
+        <nav class="mb-1">
+          <!-- Top Navigation -->
+          <div
+            class="nav-top text-white py-4 px-3 d-flex flex-row justify-content-between align-items-end"
+          >
+            <div class="pl-3 d-none d-lg-block">
+              <div class="d-flex flex-row flex-nowrap">
+                <p class="mb-1 pr-2 font-weight-bold">
+                  <i class="fas fa-cloud-sun"></i>
+                  35°
+                </p>
+                <p class="mb-0 font-weight-bold">Regina, CA <span>></span></p>
+              </div>
+              <time datetime="2020-08-19">Wed, Aug 19, 2020</time>
+            </div>
+
+            <a class="text-white" href="#">
+              <img class="logo" src="Newsweek_Logo.svg" alt="Newsweek" />
+            </a>
+
+            <div class="">
+              <a class="text-white font-weight-bold" href="">LOGIN</a>
+              <button
+                class="subscribe badge-pill border-0 px-3 py-1 ml-3 font-weight-bold"
+              >
+                SUBSCRIBE >
+              </button>
+            </div>
+          </div>
+
+          <!-- Navigation Categories/Search -->
+          <div
+            class="nav-categories py-2 bg-white d-none d-lg-block overflow-hidden position-relative"
+          >
+            <ul
+              class="list-unstyled d-flex mb-0 justify-content-between align-items-center"
+            >
+              <li>
+                <a href="">U.S.</a>
+              </li>
+              <li>
+                <a href="">World</a>
+              </li>
+              <li>
+                <a href="">Business</a>
+              </li>
+              <li>
+                <a href="">Tech & Science</a>
+              </li>
+              <li>
+                <a href="">Culture </a>
+              </li>
+              <li>
+                <a href=""> Newsgeek </a>
+              </li>
+              <li>
+                <a href="">Sports </a>
+              </li>
+              <li>
+                <a href="">Health </a>
+              </li>
+              <li>
+                <a href=""> The Debate </a>
+              </li>
+              <li>
+                <a href=""> Vantage </a>
+              </li>
+              <li>
+                <a class="border-right-0" href=""> Weather </a>
+              </li>
+
+              <li class="searchbar d-flex flex-row align-items-center">
+                <input type="search" class="border-0" placeholder="Search" />
+                <i class="fas fa-search"></i>
+              </li>
+
+              <span id="nav-red"></span>
+            </ul>
+          </div>
         </nav>
       </header>
 
+      <!-- Trending Topics -->
+      <div class="d-none d-lg-block bg-white mb-1 px-4 py-2">
+        <ul class="trending list-unstyled d-flex flex-row m-0">
+          <li>TRENDING</li>
+          <li>
+            <a href="">DONALD TRUMP</a>
+          </li>
+          <li>
+            <a href="">JOE BIDEN</a>
+          </li>
+          <li>
+            <a href="">CHINA</a>
+          </li>
+          <li>
+            <a href="">CORONAVIRUS </a>
+          </li>
+          <li>
+            <a href=""> 2020 ELECTION </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
       <main class="bg-white px-4">
-        <section class="row">
+        <section class="primary-content row">
           <section class="featured col-md-6 col-lg">
             <div class="card">
               <div class="card-body">
@@ -205,6 +309,7 @@
         </section>
       </main>
 
+      <!-- Footer -->
       <footer class="bg-white px-4">
         <div
           class="d-flex flex-row justify-content-between m-0 pt-4 text-nowrap text-muted border-bottom border-top"
