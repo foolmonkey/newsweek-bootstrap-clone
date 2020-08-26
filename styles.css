@@ -1,13 +1,85 @@
 :root {
   --primary-color: #ff0500;
+  --primary-color-mid: #ff9e9d;
   --medium-gray: #807f84;
   --light-gray: #03030366;
+  --background: #f4f5f6;
 }
 
 /* Global Styling */
+body {
+  background-color: var(--background);
+}
+
 .container-custom {
   max-width: 1300px;
   margin: 0 auto;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border: none;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* Override Card Styling */
+.card {
+  border: none;
+  border-radius: 0;
+  padding-bottom: 25px;
+}
+
+.card-img-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.card-img-container span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(243, 243, 243);
+  padding: 5px 12px;
+}
+
+.card-img-container span a {
+  color: var(--primary-color) !important;
+}
+
+.card-img-container span a:hover {
+  text-decoration: none !important;
+}
+
+.card-img-container a {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.card img {
+  border-radius: 0;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  line-height: 1.25rem;
+}
+
+.card a {
+  color: black;
+}
+
+.card a:hover {
+  text-decoration-color: var(--primary-color);
 }
 
 /* Navigation Bar */
@@ -26,8 +98,43 @@ nav {
   outline: none;
 }
 
+.fa-user {
+  color: rgb(255, 199, 199);
+}
+
 .subscribe {
   background-color: #ffe400;
+}
+
+.menu-bar {
+  background-color: unset;
+  color: var(--primary-color-mid);
+}
+
+.menu-bar:focus {
+  border: none;
+}
+
+/* Large Responsive Rules */
+@media only screen and (max-width: 992px) {
+  .nav-top {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: unset;
+    align-items: center !important;
+  }
+
+  .logo {
+    width: 200px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .subscribe {
+    font-size: 0.8rem;
+  }
 }
 
 /* Bottom of Nav */
@@ -104,4 +211,89 @@ nav {
 .trending li a {
   font-weight: bold;
   color: var(--medium-gray);
+}
+
+/* Main Content */
+
+/* Primary Articles */
+
+h2 {
+  font-size: 16px;
+  padding: 10px 0;
+  color: var(--light-gray);
+  font-weight: bold;
+}
+
+/* The Debate Section */
+.aside-card {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 5px 0;
+
+  border-bottom: 1px rgb(209, 209, 209) solid;
+}
+
+.aside-card img {
+  width: 60px;
+  margin-right: 15px;
+}
+
+.aside-card .card-title {
+  font-size: 16px;
+}
+
+.aside-card .card-text {
+  font-size: 14px;
+}
+
+/* Categories Section */
+.card-img-lg {
+  width: 90px !important;
+}
+
+/* Subscribe Section */
+.subscribe-banner {
+  padding-bottom: 0;
+}
+
+.subscribe-banner .card {
+  background-color: var(--background) !important;
+  padding: 30px;
+}
+
+.subscribe-banner .card-body {
+  padding: 20px 0 0 110px;
+}
+
+.subscribe-img-stack {
+  display: flex;
+  position: relative;
+}
+
+.subscribe-img-stack img:nth-child(2) {
+  position: absolute;
+  margin: 15px 0 0 80px;
+}
+
+/* Newsletter Card */
+.newsletter-card {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.newsletter-card .card-body {
+  padding: 25px;
+}
+
+.newsletter-card .img {
+  background-image: url("https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&h=265&q=90&f=742bce9a6f72dd8f19ba2e7fd5db06e5");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.newsletter-card input,
+.newsletter-card a {
+  width: 100%;
 }
