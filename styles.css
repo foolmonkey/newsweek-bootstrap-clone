@@ -225,6 +225,29 @@ h2 {
 }
 
 /* The Debate Section */
+#debate-vs {
+  width: 100%;
+  height: 3px;
+  border: 1px rgb(207, 207, 207) solid;
+  margin: 25px 0;
+  position: relative;
+  text-align: center;
+}
+
+#debate-vs span {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 0.6rem;
+  margin-left: -14px;
+  border-radius: 50%;
+  top: -16px;
+  color: rgb(200, 200, 200);
+  font-weight: bold;
+  background-color: black;
+  position: absolute;
+  z-index: 100;
+}
+
 .aside-card {
   display: flex;
   flex-flow: row nowrap;
@@ -247,27 +270,86 @@ h2 {
 }
 
 /* Categories Section */
+.category {
+  padding-top: 25px;
+}
+
+.category h3 {
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
 .card-img-lg {
   width: 90px !important;
 }
 
+/* In The Magazine Section */
+.in-the-magazine h5 {
+  color: black;
+}
+
+.in-the-magazine .card-body span {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.in-the-magazine .card-body span p {
+  margin: 0;
+  margin-right: 10px;
+  background-color: var(--primary-color);
+  padding: 2px 7px;
+  color: white;
+  font-weight: bold;
+}
+
+.in-the-magazine .card-body span a {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.in-the-magazine .card-body span a:hover {
+  text-decoration: none;
+}
+
+/* Section Title with Small Logo */
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.newsweek-logo-small {
+  display: block;
+  width: 29px;
+  height: 28px;
+  background: url(https://g.newsweek.com/www/images/logo-n1.svg) center/contain
+    no-repeat #f72210;
+  margin-right: 10px;
+}
+
 /* Subscribe Section */
+
 .subscribe-banner {
-  padding-bottom: 0;
 }
 
 .subscribe-banner .card {
   background-color: var(--background) !important;
-  padding: 30px;
+  padding: 20px;
 }
 
 .subscribe-banner .card-body {
-  padding: 20px 0 0 110px;
+  padding: 20px 0 0 0px;
 }
 
 .subscribe-img-stack {
   display: flex;
   position: relative;
+  max-width: 80%;
+}
+.subscribe-img-stack img {
+  width: unset;
+  max-height: 200px;
 }
 
 .subscribe-img-stack img:nth-child(2) {
@@ -275,11 +357,17 @@ h2 {
   margin: 15px 0 0 80px;
 }
 
+@media only screen and (max-width: 992px) {
+  .subscribe-banner .card-body {
+    /* padding: 20px 0 0 110px; */
+  }
+}
+
 /* Newsletter Card */
-.newsletter-card {
-  height: 100%;
-  width: 100%;
-  padding-bottom: 0;
+h5 {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .newsletter-card .card-body {
@@ -290,10 +378,10 @@ h2 {
   background-image: url("https://d.newsweek.com/en/full/1541302/starting5-homepage.png?w=397&h=265&q=90&f=742bce9a6f72dd8f19ba2e7fd5db06e5");
   background-position: center;
   background-size: cover;
-  height: 100%;
 }
 
 .newsletter-card input,
 .newsletter-card a {
   width: 100%;
+  max-width: 200px;
 }
