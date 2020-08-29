@@ -23,11 +23,15 @@ body {
   font-weight: bold;
 }
 
+.background-color-override {
+  background-color: var(--background) !important;
+}
+
 /* Override Card Styling */
 .card {
   border: none;
   border-radius: 0;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
 }
 
 .card-img-container {
@@ -269,6 +273,15 @@ h2 {
   font-size: 14px;
 }
 
+/* Sign Up Small Button */
+.card-img-small h3 {
+  font-size: 18px;
+}
+
+.card-img-small span {
+  width: 41px;
+}
+
 /* Categories Section */
 .category {
   padding-top: 25px;
@@ -383,5 +396,7 @@ h5 {
 .newsletter-card input,
 .newsletter-card a {
   width: 100%;
-  max-width: 200px;
+}
+
+.newsletter-card .newsletter-card a {
 }
