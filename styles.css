@@ -83,6 +83,7 @@ body {
 }
 
 .card a:hover {
+  -webkit-text-decoration-color: var(--primary-color);
   text-decoration-color: var(--primary-color);
 }
 
@@ -107,6 +108,7 @@ nav {
 }
 
 .subscribe {
+  font-size: 0.9rem;
   background-color: #ffe400;
 }
 
@@ -129,7 +131,7 @@ nav {
   }
 
   .logo {
-    width: 200px;
+    width: 170px;
     margin: 0;
     padding: 0;
   }
@@ -137,7 +139,7 @@ nav {
 
 @media only screen and (max-width: 768px) {
   .subscribe {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -341,11 +343,14 @@ h3 {
   margin-right: 10px;
 }
 
-/* Subscribe Section */
-
-.subscribe-banner {
+/* Call To Action Banners */
+.news-banner h3 {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 16px;
 }
 
+/* Subscribe Section */
 .subscribe-banner .card {
   background-color: var(--background) !important;
   padding: 20px;
@@ -370,18 +375,7 @@ h3 {
   margin: 15px 0 0 80px;
 }
 
-@media only screen and (max-width: 992px) {
-  .subscribe-banner .card-body {
-    /* padding: 20px 0 0 110px; */
-  }
-}
-
 /* Newsletter Card */
-h5 {
-  color: var(--primary-color);
-  font-weight: bold;
-  font-size: 16px;
-}
 
 .newsletter-card .card-body {
   padding: 25px;
@@ -398,5 +392,20 @@ h5 {
   width: 100%;
 }
 
-.newsletter-card .newsletter-card a {
+@media only screen and (max-width: 600px) {
+  .fa-2x {
+    font-size: 1.4em !important;
+    padding-top: 5px;
+  }
+
+  .subscribe-img-stack {
+    width: 100%;
+    padding-bottom: 10px;
+    justify-content: center;
+  }
+
+  .subscribe-banner > div > div {
+    display: flex;
+    flex-flow: column nowrap;
+  }
 }
